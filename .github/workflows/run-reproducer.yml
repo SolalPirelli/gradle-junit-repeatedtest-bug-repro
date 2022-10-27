@@ -13,4 +13,6 @@ jobs:
         java-version: 17
     - uses: gradle/gradle-build-action@v2
       with:
-        arguments: build
+        arguments: test
+    - name: Show test output
+      run: cat build/test-results/test/TEST-Tests.xml
